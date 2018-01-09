@@ -14,6 +14,6 @@ for link in links:
         last_two=str(temp[-1])
         first=last_two.split('/')
         directory = first[1]
-        if not os.path.exists('./'+directory):
-            os.makedirs('./'+directory)
-        urlretrieve(website+link['href'], "."+str(temp[-1]))
+        if not os.path.exists('./rawData/'+directory):
+            os.makedirs('./rawData/'+directory)
+        urlretrieve(website+link['href'], "./rawData"+str(temp[-1]))
